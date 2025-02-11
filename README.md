@@ -1,5 +1,5 @@
-- Clone this repository
-- Go into the cloned repo directory
+- Clone this project
+- Go into the cloned project directory
 - Make sure you have Docker installed on your machine
 - Run the following commands:
 - "sudo docker build -t vuln-bank ."
