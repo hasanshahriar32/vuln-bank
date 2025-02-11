@@ -1,0 +1,8 @@
+- Clone this repository
+- Go into the cloned repo directory
+- Make sure you have Docker installed on your machine
+- Run the following commands:
+- "sudo docker build -t vuln-bank ."
+- "docker run -p 5000:5000 vuln-bank"
+- Don't run these commands with the quotation marks
+- Visit http://172.17.0.2:5000/ to start testing
