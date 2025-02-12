@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Vulnerable Bank</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block title %}Vulnerable Bank{% endblock %}
+
+{% block body %}
     <div class="container">
         <h1>Welcome to Vulnerable Bank</h1>
         <h2>Made for Security Engineers to practice Application Security</h2>
@@ -13,5 +11,4 @@
             <a href="{{ url_for('register') }}" class="button">Register</a>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
