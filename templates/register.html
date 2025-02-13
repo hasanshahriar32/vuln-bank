@@ -1,42 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Register - Vulnerable Bank</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script>
-        function handleRegistration(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            
-            fetch('/register', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    // Show success message
-                    document.getElementById('message').innerHTML = data.message;
-                    document.getElementById('message').style.color = 'green';
-                    
-                    // Redirect to login after 2 seconds
-                    setTimeout(() => {
-                        window.location.href = '/login';
-                    }, 2000);
-                } else {
-                    document.getElementById('message').innerHTML = data.message;
-                    document.getElementById('message').style.color = 'red';
-                }
-            })
-            .catch(error => {
-                document.getElementById('message').innerHTML = 'Registration failed. Please try again.';
-                document.getElementById('message').style.color = 'red';
-            });
-        }
-    </script>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block title %}Register - Vulnerable Bank{% endblock %}
+
+{% block body %}
     <div class="container">
         <h1>Register</h1>
         <div id="message"></div>
@@ -47,5 +13,4 @@
         </form>
         <a href="{{ url_for('login') }}">Already have an account? Login</a>
     </div>
-</body>
-</html>
+{% endblock %}
