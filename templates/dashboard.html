@@ -1,8 +1,10 @@
-{% extends "layout.html" %}
-
-{% block title %}Dashboard - Vulnerable Bank{% endblock %}
-
-{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Vulnerable Bank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
     <div class="container">
         <h1>Welcome, {{ username | safe }}</h1>
         <p>Account Number: {{ account_number }}</p>
@@ -49,4 +51,5 @@
         
         <a href="{{ url_for('login') }}" class="button">Logout</a>
     </div>
-{% endblock %}
+</body>
+</html>

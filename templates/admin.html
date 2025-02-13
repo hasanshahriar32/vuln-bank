@@ -1,8 +1,10 @@
-{% extends "layout.html" %}
-
-{% block title %}Register - Vulnerable Bank{% endblock %}
-
-{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - Vulnerable Bank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
     <div class="container">
         <h1>Admin Panel</h1>
         
@@ -71,4 +73,5 @@
         
         <a href="{{ url_for('dashboard') }}" class="button">Back to Dashboard</a>
     </div>
-{% endblock %}
+</body>
+</html>

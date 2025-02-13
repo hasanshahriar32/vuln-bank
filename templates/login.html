@@ -1,8 +1,10 @@
-{% extends "layout.html" %}
-
-{% block title %}Login - Vulnerable Bank{% endblock %}
-
-{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Vulnerable Bank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
     <div class="container">
         <h1>Login</h1>
         <form method="POST">
@@ -12,4 +14,5 @@
         </form>
         <a href="{{ url_for('register') }}">Don't have an account? Register</a>
     </div>
-{% endblock %}
+</body>
+</html>
